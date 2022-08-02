@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return inertia('Welcome');
+    return Inertia::render('Home',
+        ['name' => 'Chundubai',
+            'frameworks' => [
+                'Laravel',
+                'Vue',
+                'Javascript',
+                'Reactjs'
+            ]
+        ]
+    );
+});
+
+Route::get('/users', function (){
+   return Inertia::render('Users');
+});
+Route::get('/settings', function (){
+   return Inertia::render('Settings');
 });

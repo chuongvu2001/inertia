@@ -75,3 +75,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - npm install vue@next
 - npm install -D @vue/compiler-sfc
 - npx mix
+
+## Progress indicators
+
+- npm install @inertiajs/progress
